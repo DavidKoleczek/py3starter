@@ -1,6 +1,31 @@
 [build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
-]
+requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "py3starter"
+version = "0.0.1"
+description = "A starter Python 3 package"
+requires-python = ">=3.11"
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8",
+    "flake8-bugbear",
+    "flake8-broken-line",
+    "flake8-comprehensions",
+    "pep8-naming",
+    "pyproject-flake8"
+]
+
+[tool.flake8]
+max-line-length = 120
+# This ignore is required by black.
+extend-ignore = "E203,E501"
+
+[tool.black]
+line-length = 120
+target-version = ["py311"]
