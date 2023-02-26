@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -18,13 +18,12 @@ dev = [
     "flake8-broken-line",
     "flake8-comprehensions",
     "pep8-naming",
-    "pyproject-flake8"
+    "flake8-pyproject"
 ]
 
 [tool.flake8]
 max-line-length = 120
-# This ignore is required by black.
-extend-ignore = "E203,E501"
+extend-ignore = "E203, E501"
 
 [tool.black]
 line-length = 120

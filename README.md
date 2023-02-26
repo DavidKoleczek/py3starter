@@ -1,6 +1,11 @@
 # Python 3 Starter Repo
 A skeleton/template repo meant to be copied to initialize new Python projects. Also includes configuration for development in [Visual Studio Code](https://code.visualstudio.com/).
 
+## Requirements
+- [Python 3.11.x](https://www.python.org/) - Older versions may work, but are not tested
+- [pyenv](https://github.com/pyenv/pyenv#basic-github-checkout) - Recommended for managing Python versions on Linux
+
+
 ## Installation Instructions
 ### Linux
 1. Create a virtual environment (assumes Python 3.11 is installed and available with `python3`)
@@ -15,10 +20,10 @@ A skeleton/template repo meant to be copied to initialize new Python projects. A
     source .venv/bin/activate
     ```
 
-3. Upgrade pip, setuptools, and wheel
+3. Upgrade pip
     
     ```bash
-    pip install --upgrade pip setuptools wheel
+    pip install --upgrade pip
     ```
 
 4. Install the package (in editable mode)
@@ -52,4 +57,48 @@ Note these commands can be troublesome to run in PowerShell, try admin privilege
         
     ```bash
     pip install -e .[dev]
+    ```
+
+
+## [pyenv](https://github.com/pyenv/pyenv) Instructions for Reference
+- **Installing Python Version** - To install additional Python versions, use [`pyenv install`](COMMANDS.md#pyenv-install).
+    For example, to download and install Python 3.11.2, run:
+
+    ```sh
+    pyenv install 3.11.2
+    ```
+
+    Running `pyenv install -l` gives the list of all available versions.
+
+- **Selecting Python Version** - To select a Pyenv-installed Python as the version to use, run one of the following commands:
+
+    * [`pyenv shell <version>`](COMMANDS.md#pyenv-shell) -- select just for current shell session
+    * [`pyenv local <version>`](COMMANDS.md#pyenv-local) -- automatically select whenever you are in the current directory (or its subdirectories)
+    * [`pyenv global <version>`](COMMANDS.md#pyenv-shell) -- select globally for your user account
+
+    E.g. to select the above-mentioned newly-installed Python 3.10.4 as your preferred version to use:
+
+    ~~~bash
+    pyenv global 3.10.4
+    ~~~
+
+    Now whenever you invoke `python`, `pip` etc., an executable from the Pyenv-provided
+    3.10.4 installation will be run instead of the system Python.
+
+- **Uninstalling Python Versions** -  As time goes on, you will accumulate Python versions in your `$(pyenv root)/versions` directory.
+
+    To remove old Python versions, use [`pyenv uninstall <versions>`](COMMANDS.md#pyenv-uninstall).
+
+    Alternatively, you can simply `rm -rf` the directory of the version you want
+    to remove. You can find the directory of a particular Python version
+    with the `pyenv prefix` command, e.g. `pyenv prefix 2.6.8`.
+    Note however that plugins may run additional operations on uninstall
+    which you would need to do by hand as well. E.g. Pyenv-Virtualenv also
+    removes any virtual environments linked to the version being uninstalled.
+
+- **Upgrading pyenv**- To upgrade to the latest development version of pyenv, use `git pull`:
+
+    ```sh
+    cd $(pyenv root)
+    git pull
     ```

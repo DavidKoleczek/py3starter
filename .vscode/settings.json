@@ -3,9 +3,7 @@
     "python.formatting.provider": "black",
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
-    "python.linting.flake8Args": [
-        "--ignore=E203,E501",
-        "--max-line-length=120",
-        "--verbose"
-    ]
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true,
+    },
 }
