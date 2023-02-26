@@ -38,7 +38,7 @@ Note these commands can be troublesome to run in PowerShell, try admin privilege
 1. Create a new Python virtual environment in the top-level project directory where the first path is the path to the Python executable and the second path is the path to the directory where the virtual environment will be created.
     
     ```bash
-    "C:\Program Files\Python310\python" -m venv "C:\Programming\py3starter\.venv"
+    "C:\Program Files\Python311\python.exe" -m venv "C:\py3starter\.venv"
     ```
 
 2. Activate the virtual environment
@@ -47,10 +47,10 @@ Note these commands can be troublesome to run in PowerShell, try admin privilege
     .\.venv\Scripts\activate
     ```
 
-3. Upgrade pip, setuptools, and wheel
+3. Upgrade pip (note the path to the Python executable corresponds to the path used in step 1)
     
     ```bash
-    pip install --upgrade pip setuptools wheel
+    C:\py3starter\.venv\Scripts\python.exe -m pip install --upgrade pip
     ```
 
 4. Install the package (in editable mode)
@@ -76,14 +76,14 @@ Note these commands can be troublesome to run in PowerShell, try admin privilege
     * [`pyenv local <version>`](COMMANDS.md#pyenv-local) -- automatically select whenever you are in the current directory (or its subdirectories)
     * [`pyenv global <version>`](COMMANDS.md#pyenv-shell) -- select globally for your user account
 
-    E.g. to select the above-mentioned newly-installed Python 3.10.4 as your preferred version to use:
+    E.g. to select the above-mentioned newly-installed Python 3.11.2 as your preferred version to use:
 
     ~~~bash
-    pyenv global 3.10.4
+    pyenv global 3.11.2
     ~~~
 
     Now whenever you invoke `python`, `pip` etc., an executable from the Pyenv-provided
-    3.10.4 installation will be run instead of the system Python.
+    3.11.2 installation will be run instead of the system Python.
 
 - **Uninstalling Python Versions** -  As time goes on, you will accumulate Python versions in your `$(pyenv root)/versions` directory.
 
