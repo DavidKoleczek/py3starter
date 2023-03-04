@@ -1,0 +1,3 @@
+This is a small text file we
+use to experiment with how to 
+to load its contents inside a python script.
