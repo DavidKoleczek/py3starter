@@ -4,6 +4,9 @@ A skeleton/template repo meant to be copied to initialize new Python projects. A
 ## Requirements
 - [Python 3.11.x](https://www.python.org/) - Older versions may work, but are not tested
 - [pyenv](https://github.com/pyenv/pyenv#basic-github-checkout) - Recommended for managing Python versions on Linux
+- (Recommended) VSCode Extensions
+    - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+    - [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff)
 
 
 ## Installation Instructions
@@ -55,8 +58,7 @@ chmod +x install.sh
 
 
 ### Windows - Option 1 (Convenience Batch Script)
-```bash
-```
+Run `install.bat`.
 
 ### Windows - Option 2 (Manual)
 
