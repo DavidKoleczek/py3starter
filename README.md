@@ -7,7 +7,28 @@ A skeleton/template repo meant to be copied to initialize new Python projects. A
 
 
 ## Installation Instructions
-### Linux
+1. Copy over at least the following folders/files.
+    - `src`
+    - `.gitignore`
+    - `install.sh` and/or `install.bat`
+    - `pyproject.toml`
+    - `README.md`
+
+2. Make the following changes based on your project.
+    - `src/py3starter` - Rename to the name of your project and remove any subfolders or `.py` files that are not needed.
+    - `pyproject.toml`
+        - Update the `name` and `description` fields.
+        - Under `[tool.setuptools.package-data]` rename `py3starter` to the name of your project if you need to include any additional files in the package.
+
+
+### Linux - Option 1 (Convenience Bash Script)
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+
+### Linux - Option 2 (Manual)
 1. Create a virtual environment (assumes Python 3.11 is installed and available with `python3`)
     
     ```bash
@@ -33,7 +54,12 @@ A skeleton/template repo meant to be copied to initialize new Python projects. A
     ```
 
 
-### Windows
+### Windows - Option 1 (Convenience Batch Script)
+```bash
+```
+
+### Windows - Option 2 (Manual)
+
 Note these commands can be troublesome to run in PowerShell, try admin privileged Command Prompt instead.
 1. Create a new Python virtual environment in the top-level project directory where the first path is the path to the Python executable and the second path is the path to the directory where the virtual environment will be created.
     
