@@ -7,6 +7,7 @@ A skeleton/template repo meant to be copied to initialize new Python projects. A
 - (Recommended) VSCode Extensions
     - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
     - [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff)
+    - [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
 
 
 ## Installation Instructions
