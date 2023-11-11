@@ -8,10 +8,10 @@ version = "0.0.1"
 description = "A starter Python 3 package"
 requires-python = ">=3.11"
 
+dependencies = []
+
 [tool.setuptools.package-data]
 py3starter = ["*.txt"]
-
-dependencies = []
 
 [project.optional-dependencies]
 dev = [
