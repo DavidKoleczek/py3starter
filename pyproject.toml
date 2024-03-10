@@ -15,7 +15,6 @@ py3starter = ["*.txt"]
 
 [project.optional-dependencies]
 dev = [
-    "black",
     "ruff",
     "pytest",
 ]
@@ -23,7 +22,10 @@ dev = [
 [tool.ruff]
 line-length = 120
 target-version = "py311"
-extend-select = [
+src = ["src"]
+
+[tool.ruff.lint]
+select = [
     "I", # isort
     "N", # pep8-naming
     "UP", # pyupgrade
@@ -34,20 +36,12 @@ extend-select = [
     "SIM", # flake8-simplify
     "TID", # flake8-tidy-imports
 ]
-extend-ignore = ["RUF005", "E501"]
-src = ["src"]
+ignore = ["E501"]
 unfixable = ["F401"]
 
-[tool.ruff.isort]
+[tool.ruff.lint.isort]
 force-sort-within-sections = true
 split-on-trailing-comma = false
 
-[tool.ruff.flake8-tidy-imports]
+[tool.ruff.lint.flake8-tidy-imports]
 ban-relative-imports = "all"
-
-[tool.ruff.flake8-bugbear]
-extend-immutable-calls = ["typer.Argument"]
-
-[tool.black]
-line-length = 120
-target-version = ["py311"]

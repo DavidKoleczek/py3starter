@@ -1,13 +1,13 @@
 # Python 3 Starter Repo
 A skeleton/template repo meant to be copied to initialize new Python projects. Also includes configuration for development in [Visual Studio Code](https://code.visualstudio.com/).
 
+
 ## Requirements
-- [Python 3.11.x](https://www.python.org/) - Older versions may work, but are not tested
+- [Python >=3.11.x](https://www.python.org/) - Older versions may work, but are not tested
 - [pyenv](https://github.com/pyenv/pyenv#basic-github-checkout) - Recommended for managing Python versions on Linux
 - (Recommended) VSCode Extensions
     - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
     - [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff)
-    - [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
 
 
 ## Installation Instructions
@@ -62,7 +62,6 @@ chmod +x install.sh
 Run `install.bat`.
 
 ### Windows - Option 2 (Manual)
-
 Note these commands can be troublesome to run in PowerShell, try admin privileged Command Prompt instead.
 1. Create a new Python virtual environment in the top-level project directory where the first path is the path to the Python executable and the second path is the path to the directory where the virtual environment will be created.
     
@@ -87,6 +86,18 @@ Note these commands can be troublesome to run in PowerShell, try admin privilege
     ```bash
     pip install -e .[dev]
     ```
+
+
+## Ruff Formatting
+Check formatting 
+```bash
+ruff check .
+```
+
+Format code
+```bash
+ruff format .
+```
 
 
 ## [pyenv](https://github.com/pyenv/pyenv) Instructions for Reference
